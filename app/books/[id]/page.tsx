@@ -46,7 +46,7 @@ export default async function BookDetailPage({ params }: Props) {
           className="w-48 h-72 object-cover rounded"
         />
         <div className="mb-12 md:mb-0">
-          <h2 className="text-xl font-semibold mb-2">Description</h2>
+          <h2 className="text-xl font-semibold mb-2">Description </h2>
           <p className="text-gray-800">{book.description}</p>
         </div>
       </div>
