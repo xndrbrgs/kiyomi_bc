@@ -17,6 +17,7 @@ model Book {
   id           String   @id @default(uuid())
   title        String
   bookReviewer String
+  rating       String
   description  String
   imageUrl     String? // optional; we can populate later via API route
   createdAt    DateTime @default(now())

@@ -36,6 +36,9 @@ export default async function BookDetailPage({ params }: Props) {
       </div>
       <h1 className="text-3xl font-bold mb-2">{book.title}</h1>
       <h2 className="text-md mb-2">
+        Rating: <span className="font-bold">{book.rating}/5</span>
+      </h2>
+      <h2 className="text-md mb-2">
         Review written by:{" "}
         <span className="font-bold">{book.bookReviewer}</span>
       </h2>
