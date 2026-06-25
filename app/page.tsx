@@ -80,7 +80,7 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <DeleteButton id={b.id} title={b.title} onDeleted={loadBooks} />
+                {/* <DeleteButton id={b.id} title={b.title} onDeleted={loadBooks} /> */}
               </li>
             ))}
           </ul>
