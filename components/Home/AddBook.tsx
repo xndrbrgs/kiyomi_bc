@@ -10,6 +10,7 @@ type Props = {
 export default function AddBookForm({ onAdded }: Props) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  const [bookReviewer, setBookReviewer] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleAdd = async (e: React.FormEvent) => {
@@ -31,6 +32,7 @@ export default function AddBookForm({ onAdded }: Props) {
         body: JSON.stringify({
           titleCapital,
           description,
+          bookReviewer,
           imageUrl,
         }),
       });
@@ -42,6 +44,7 @@ export default function AddBookForm({ onAdded }: Props) {
 
       // Clear form and notify parent to refresh the list
       setTitle("");
+      setBookReviewer("");
       setDescription("");
       onAdded?.();
     } catch (err) {
@@ -68,6 +71,16 @@ export default function AddBookForm({ onAdded }: Props) {
             onChange={(e) => setTitle(e.target.value)}
             className="w-full border rounded p-2"
             placeholder="e.g., The Great Gatsby"
+            required
+          />
+        </div>
+        <div className="flex flex-col space-y-2">
+          <label className="block font-medium">Write Your Name</label>
+          <input
+            value={bookReviewer}
+            onChange={(e) => setBookReviewer(e.target.value)}
+            className="w-full border rounded p-2"
+            placeholder="e.g., Alex Borges"
             required
           />
         </div>

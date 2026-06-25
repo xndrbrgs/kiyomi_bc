@@ -11,7 +11,7 @@ export async function GET() {
 
 export async function POST(req: Request) {
     try {
-        const { titleCapital, description, imageUrl } = await req.json();
+        const { titleCapital, bookReviewer, description, imageUrl } = await req.json();
 
         if (!titleCapital || !description) {
             return NextResponse.json(
@@ -21,7 +21,7 @@ export async function POST(req: Request) {
         }
 
         const book = await prisma.book.create({
-            data: { title: titleCapital, description, imageUrl },
+            data: { title: titleCapital, bookReviewer, description, imageUrl },
         });
 
         return NextResponse.json(book, { status: 201 });

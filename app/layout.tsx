@@ -12,7 +12,8 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: "Kiyomi Book Club",
-  description: "Discover and share your favorite books with the Kiyomi Book Club community.",
+  description:
+    "Discover and share your favorite books with the Kiyomi Book Club community.",
 };
 
 export default function RootLayout({
@@ -26,7 +27,6 @@ export default function RootLayout({
         <body className={`${montserrat.variable} antialiased font-montserrat`}>
           <Navbar />
           {children}
-          <Footer />
         </body>
       </html>
     </ViewTransitions>
