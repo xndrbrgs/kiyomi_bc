@@ -67,9 +67,17 @@ export default function HomePage() {
                   <p className="text-gray-600 line-clamp-1 md:line-clamp-3 text-sm md:text-md">
                     {b.description}
                   </p>
-                  <p className="text-xs text-gray-500">
-                    Added: {new Date(b.createdAt).toLocaleString()}
-                  </p>
+                  <div className="pt-2">
+                    <p className="text-xs text-gray-500">
+                      Review By:{" "}
+                      <span className="text-black font-bold">
+                        {b.bookReviewer}
+                      </span>
+                    </p>
+                    <p className="text-xs text-gray-500">
+                      Added: {new Date(b.createdAt).toLocaleString()}
+                    </p>
+                  </div>
                 </div>
 
                 <DeleteButton id={b.id} title={b.title} onDeleted={loadBooks} />
