@@ -11,9 +11,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Kiyomi Book Club",
+  title: "The Kool Kids Book Club",
   description:
-    "Discover and share your favorite books with the Kiyomi Book Club community.",
+    "Discover and share your favorite books with The Kool Kids Book Club community.",
 };
 
 export default function RootLayout({
